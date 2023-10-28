@@ -1,0 +1,299 @@
+--------------------------------------------------------------------------
+                                 All Files                                
+--------------------------------------------------------------------------
+'./code/test.lcx'
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Test File Ending
+Convert lcx to lcl:
+
+SA CL#A#B#CTI,BNTW
+    PB SA VO  mainTNTW
+
+    NW
+    B ends#WithTS phrase, S end#WitNT
+    W
+        I a V 2J
+        a +V 5J
+        a V ++aJ 
+        a V a + 2 M 3J
+    NW
+NW
+Compile LCL!
+--------------------------------------------------------------------------
+                                SIMPLY JSON                               
+--------------------------------------------------------------------------
+{"particles":[{"type":"KEYWORD","id":93,"name":"W"},{"type":"KEYWORD","id":22,"name":"SA"},{"type":"KEYWORD","id":106,"name":"CL"},{"type":"CONTEXT","text":"ABC"},{"type":"KEYWORD","id":89,"name":"T"},{"type":"KEYWORD","id":28,"name":"I"},{"type":"KEYWORD","id":120,"name":","},{"type":"KEYWORD","id":29,"name":"B"},{"type":"KEYWORD","id":90,"name":"NT"},{"type":"KEYWORD","id":93,"name":"W"},{"type":"KEYWORD","id":18,"name":"PB"},{"type":"KEYWORD","id":22,"name":"SA"},{"type":"KEYWORD","id":38,"name":"VO"},{"type":"CONTEXT","text":"main"},{"type":"KEYWORD","id":89,"name":"T"},{"type":"KEYWORD","id":90,"name":"NT"},{"type":"KEYWORD","id":93,"name":"W"},{"type":"KEYWORD","id":94,"name":"NW"},{"type":"KEYWORD","id":29,"name":"B"},{"type":"CONTEXT","text":"endsWith"},{"type":"KEYWORD","id":89,"name":"T"},{"type":"KEYWORD","id":31,"name":"S"},{"type":"CONTEXT","text":"phrase"},{"type":"KEYWORD","id":120,"name":","},{"type":"KEYWORD","id":31,"name":"S"},{"type":"CONTEXT","text":"endWit"},{"type":"KEYWORD","id":90,"name":"NT"},{"type":"KEYWORD","id":93,"name":"W"},{"type":"KEYWORD","id":28,"name":"I"},{"type":"CONTEXT","text":"a"},{"type":"KEYWORD","id":59,"name":"V"},{"type":"NUMBER","sign":11,"value":2},{"type":"KEYWORD","id":97,"name":"J"},{"type":"CONTEXT","text":"a"},{"type":"KEYWORD","id":40,"name":"+V"},{"type":"NUMBER","sign":11,"value":5},{"type":"KEYWORD","id":97,"name":"J"},{"type":"CONTEXT","text":"a"},{"type":"KEYWORD","id":59,"name":"V"},{"type":"KEYWORD","id":41,"name":"++"},{"type":"CONTEXT","text":"a"},{"type":"KEYWORD","id":97,"name":"J"},{"type":"CONTEXT","text":"a"},{"type":"KEYWORD","id":59,"name":"V"},{"type":"CONTEXT","text":"a"},{"type":"KEYWORD","id":42,"name":"+"},{"type":"NUMBER","sign":11,"value":2},{"type":"KEYWORD","id":47,"name":"M"},{"type":"NUMBER","sign":11,"value":3},{"type":"KEYWORD","id":97,"name":"J"},{"type":"KEYWORD","id":94,"name":"NW"},{"type":"KEYWORD","id":94,"name":"NW"},{"type":"KEYWORD","id":94,"name":"NW"}],"count":53}
+POSTPRE[CURRENT-KEYWORD] W
+POSTPRE[CURRENT-KEYWORD] SA
+POSTPRE[CURRENT-KEYWORD] CL
+POSTPRE[CURRENT-CONTEXT] ABC
+POSTPRE[CURRENT-KEYWORD] T
+POSTPRE[CURRENT-KEYWORD] I
+POSTPRE[CURRENT-KEYWORD] ,
+POSTPRE[CURRENT-KEYWORD] B
+POSTPRE[CURRENT-KEYWORD] NT
+POSTPRE[CURRENT-KEYWORD] W
+POSTPRE[CURRENT-KEYWORD] PB
+POSTPRE[CURRENT-KEYWORD] SA
+POSTPRE[CURRENT-KEYWORD] VO
+POSTPRE[CURRENT-CONTEXT] main
+POSTPRE[CURRENT-KEYWORD] T
+POSTPRE[CURRENT-KEYWORD] NT
+POSTPRE[CURRENT-KEYWORD] W
+POSTPRE[CURRENT-KEYWORD] NW
+POSTPRE[CURRENT-KEYWORD] B
+POSTPRE[CURRENT-CONTEXT] endsWith
+POSTPRE[CURRENT-KEYWORD] T
+POSTPRE[CURRENT-KEYWORD] S
+POSTPRE[CURRENT-CONTEXT] phrase
+POSTPRE[CURRENT-KEYWORD] ,
+POSTPRE[CURRENT-KEYWORD] S
+POSTPRE[CURRENT-CONTEXT] endWit
+POSTPRE[CURRENT-KEYWORD] NT
+POSTPRE[CURRENT-KEYWORD] W
+POSTPRE[CURRENT-KEYWORD] I
+POSTPRE[CURRENT-CONTEXT] a
+POSTPRE[CURRENT-KEYWORD] V
+POSTPRE[CURRENT-NUMBER] 2
+POSTPRE[CURRENT-KEYWORD] J
+POSTPRE[CURRENT-CONTEXT] a
+POSTPRE[CURRENT-KEYWORD] +V
+POSTPRE[CURRENT-NUMBER] 5
+POSTPRE[CURRENT-KEYWORD] J
+POSTPRE[CURRENT-CONTEXT] a
+POSTPRE[CURRENT-KEYWORD] V
+POSTPRE[CURRENT-KEYWORD] ++
+POSTPRE[CURRENT-CONTEXT] a
+POSTPRE[CURRENT-KEYWORD] J
+POSTPRE[CURRENT-CONTEXT] a
+POSTPRE[CURRENT-KEYWORD] V
+POSTPRE[CURRENT-CONTEXT] a
+POSTPRE[CURRENT-KEYWORD] +
+POSTPRE[CURRENT-NUMBER] 2
+POSTPRE[CURRENT-KEYWORD] M
+POSTPRE[CURRENT-NUMBER] 3
+POSTPRE[CURRENT-KEYWORD] J
+POSTPRE[CURRENT-KEYWORD] NW
+POSTPRE[CURRENT-KEYWORD] NW
+CURR PARTICLE[CURRENT-KEYWORD] W
+[1][1]CTC[CURRENT-KEYWORD] CL
+CTX[CURRENT-CONTEXT] ABC
+should be context1[CURRENT-CONTEXT] ABC
+inher[CURRENT-KEYWORD] NT
+CURR PARTICLE[CURRENT-KEYWORD] W
+[2][2][2]CTC[CURRENT-KEYWORD] VO
+CTX[CURRENT-CONTEXT] main
+should be context2[CURRENT-CONTEXT] main
+CURR PARTICLE[CURRENT-KEYWORD] W
+[3]End of I 17
+Found Method
+[2]CTC[CURRENT-KEYWORD] B
+CTX[CURRENT-CONTEXT] endsWith
+should be context2[CURRENT-CONTEXT] endsWith
+CURR PARTICLE[CURRENT-KEYWORD] W
+[4]CTC[CURRENT-KEYWORD] I
+CTX[CURRENT-CONTEXT] a
+should be context4[CURRENT-CONTEXT] a
+RESOLVE LENGTH -> START
+a  §29
+RESOLVE LENGTH -> X1
+a  §29
+RESOLVE LENGTH -> X1
+V  §30
+RESOLVE LENGTH -> X1
+2  §31
+
+$1   V   $2   
+OPX
+S-E 30 <> 32 <> 31
+HELLOX[CURRENT-KEYWORD] J
+S-E 30 <> 30 <> 31
+HELLOX $3
+
+$1   
+Found Variable4
+[4][4]CTC[CURRENT-CONTEXT] a
+CTX[CURRENT-KEYWORD] +V
+should be context4[CURRENT-KEYWORD] +V
+RESOLVE LENGTH -> START
+a  §33
+RESOLVE LENGTH -> X1
+a  §33
+RESOLVE LENGTH -> X1
++V  §34
+RESOLVE LENGTH -> X1
+5  §35
+
+$1   +V   $2   
+OPX
+S-E 34 <> 36 <> 35
+HELLOX[CURRENT-KEYWORD] J
+S-E 34 <> 34 <> 35
+HELLOX $3
+
+$1   
+Found Executor
+[4][4]CTC[CURRENT-CONTEXT] a
+CTX[CURRENT-KEYWORD] V
+should be context4[CURRENT-KEYWORD] V
+RESOLVE LENGTH -> START
+a  §37
+RESOLVE LENGTH -> X1
+a  §37
+RESOLVE LENGTH -> X1
+V  §38
+RESOLVE LENGTH -> X1
+++  §39
+RESOLVE LENGTH -> X1
+a  §40
+
+$1   V   ++   $2   
+OPX
+S-E 39 <> 41 <> 40
+HELLOX[CURRENT-CONTEXT] a
+S-E 39 <> 40 <> 39
+HELLOX $3
+
+$1   V   $3   
+S-E 38 <> 40 <> 39
+HELLOX[CURRENT-CONTEXT] a
+S-E 38 <> 38 <> 39
+HELLOX $4
+
+$1   
+Found Executor
+[4][4]CTC[CURRENT-CONTEXT] a
+CTX[CURRENT-KEYWORD] V
+should be context4[CURRENT-KEYWORD] V
+RESOLVE LENGTH -> START
+a  §42
+RESOLVE LENGTH -> X1
+a  §42
+RESOLVE LENGTH -> X1
+V  §43
+RESOLVE LENGTH -> X1
+a  §44
+RESOLVE LENGTH -> X1
++  §45
+RESOLVE LENGTH -> X1
+2  §46
+RESOLVE LENGTH -> X1
+M  §47
+RESOLVE LENGTH -> X1
+3  §48
+
+$1   V   $2   +   $3   M   $4   
+OPX
+S-E 47 <> 49 <> 48
+HELLOX[CURRENT-KEYWORD] J
+S-E 47 <> 43 <> 48
+HELLOX $5
+
+$1   
+Found Executor
+[4][4]End of I 50
+Found Method
+[2]End of I 51
+Found Class: 51
+[1]End of I 52
+-- After parseChild --
+--------------------------------------------------------------------------
+                                 Tokeniser                                
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+                                ROOT CLASS                                
+--------------------------------------------------------------------------
+0 | CLASS ICO Name: ABC
+    -- Inherit --
+    Inherit [CURRENT-KEYWORD] I
+    Inherit [CURRENT-KEYWORD] B
+        0 | Method ICO Name: main
+        1 | Method ICO Name: endsWith
+            Transfer Variable ICO Name:phrase
+
+            Transfer Variable ICO Name:endWit
+
+                0 | Variable ICO Name:a
+--------------------------------------------------------------------------
+                            Executor Variables                            
+--------------------------------------------------------------------------
+                    $0:  NULL
+                    $1:  a
+                    $2:  2
+                    $3:  $3
+--------------------------------------------------------------------------
+                               Executor List                              
+--------------------------------------------------------------------------
+                    Keywords: V
+                    Param1: $1
+                    Param2: $2
+                    Result: $3
+                    ----------------
+InnerResult: $1
+
+                1 | EXECUTOR ICO
+--------------------------------------------------------------------------
+                            Executor Variables                            
+--------------------------------------------------------------------------
+      $0:  NULL
+      $1:  a
+      $2:  5
+      $3:  $3
+--------------------------------------------------------------------------
+                               Executor List                              
+--------------------------------------------------------------------------
+      Keywords: +V
+      Param1: $1
+      Param2: $2
+      Result: $3
+      ----------------
+InnerResult: $1
+
+                2 | EXECUTOR ICO
+--------------------------------------------------------------------------
+                            Executor Variables                            
+--------------------------------------------------------------------------
+      $0:  NULL
+      $1:  a
+      $2:  a
+      $3:  $3
+      $4:  $4
+--------------------------------------------------------------------------
+                               Executor List                              
+--------------------------------------------------------------------------
+      Keywords: ++
+      Param1: NULL
+      Param2: $2
+      Result: $3
+      ----------------
+      Keywords: V
+      Param1: $1
+      Param2: $3
+      Result: $4
+      ----------------
+InnerResult: $1
+
+                3 | EXECUTOR ICO
+--------------------------------------------------------------------------
+                            Executor Variables                            
+--------------------------------------------------------------------------
+      $0:  NULL
+      $1:  a
+      $2:  a
+      $3:  2
+      $4:  3
+      $5:  $5
+--------------------------------------------------------------------------
+                               Executor List                              
+--------------------------------------------------------------------------
+      Keywords: M
+      Param1: $3
+      Param2: $4
+      Result: $5
+      ----------------
+InnerResult: $1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Compilation Successful => Took 13.315s

@@ -1,0 +1,6 @@
+Bug
+- Wrong detection on method(int a = 2){}
+- (Generic Type in ICOT::parse)
+TODO
+- Variable location system
+

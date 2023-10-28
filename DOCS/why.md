@@ -1,0 +1,13 @@
+# Just Why?
+## Why use this language
+First I need to give credit to the very well designed Programming language Java, many people around the world like to program Java, even learned real programming in Java (,including me). The language has an excellent syntax, is easy to write and you don't need any recursions, like in C++, it is very Object Oriented, which makes it easy to understand even more Complex programs. Further more it is used widely in the Server Space and most Android Mobile Apps are based on it or the related language Kotlin. But besides the benefits of having a lot of people who can and like to write it, Java does have its flaws.
+
+First one of the most annoying things I encountered is Compiling and Shipping a program. While compiling the program isn't that much of a problem, besides some difficulties with the declaration of the MainClass, the shipping part is the more complex one, because you can't "just" compile it into an Executable File and send it to your friend or ship it for the internet to download, you need to first tell the users / executors to download the Java Runtime Environment and then how to execute it.
+Another really obvious problem is the performance. Java is always running in an Virtual Environment and needs to translate virtually every command from the binary code of the compiler to the binary commands it sends to the CPU. Which isn't performant at all.
+The next thing to mention is, that the syntax and the commands are lacking some things features, a programming-language should have. => For this see Added Features
+
+Also a point Developers don't like, is the length of the syntax. As soon as you write a Java program, you are confronted with a syntax, where you need to write multiple lines really long lines of code just to get it to work. Best example of that might be "System.out.println()", because you need to write a Class, Variable and Method-Name, just to print something to the console, where other languages like Python just do "print()" or even C++ "std::cout << "
+
+The last an most important thing, that combines most of the points above is the compatibility. Java, Python, JS and much more programming-languages are not supported for some platforms, you can't just write a Web-Application in Java anymore. Or you couldn't just develop for a Website in Python. Or you can forget all of them as soon as you go low-level, like Arduino, ESP, etc. Because they need more performant languages like C or C++.
+
+So why not have one programming-language that combines the best features of all languages and can be compiled in the most popular ones.

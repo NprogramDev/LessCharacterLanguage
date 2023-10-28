@@ -1,0 +1,5 @@
+#!/bin/bash
+empty   
+#rm ./code/*.gch
+#rm ./code/tokenise/*.gch
+g++ ./code/*.cpp ./code/*.hpp ./code/tokenise/*.cpp ./code/tokenise/*.hpp ./code/simplyfy/*.hpp ./code/simplyfy/*.cpp

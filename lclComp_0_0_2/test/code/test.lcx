@@ -1,0 +1,8 @@
+static class ABC( int , bool ){
+    public static void  main(){
+        int a = switch(a==b){
+            case a; print(b);
+            case b; print(c);
+        }
+    }
+}

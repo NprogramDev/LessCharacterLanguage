@@ -1,0 +1,24 @@
+GCA
+Include math.lcl
+NGCA
+CL frW
+    I num,denomJ
+    PB frT D num  NTW
+        I flx V math.getfl_bin_digitTnumNTJ
+
+    NW
+    PB frT I num, I denom NT X numTnumNT, denomTNdenomT TNTW
+        mksimpTNTJ
+    NW
+    PB VO mksimpTNTW
+        I gcd V math.gcdTnum,denomNTJ
+        gcd E 0 Y CTBKJNYNY
+        num QV gcdJ
+        denom QV gcdJ
+    NW
+NW
+CL frmathT math NTW
+
+
+
+NW

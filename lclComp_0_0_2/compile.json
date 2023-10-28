@@ -1,0 +1,387 @@
+{
+    "meta": {
+        "version": 99991
+    },
+    "data": [
+        {
+            "type": "class",
+            "name": "ABC",
+            "inheritance": [
+                {
+                    "type": "KEYWORD",
+                    "id": 28,
+                    "name": "I"
+                },
+                {
+                    "type": "KEYWORD",
+                    "id": 29,
+                    "name": "B"
+                }
+            ],
+            "body": [
+                {
+                    "name": "main",
+                    "type": "method",
+                    "annotation": [],
+                    "transfers": [],
+                    "attributes": [
+                        {
+                            "type": "KEYWORD",
+                            "id": 22,
+                            "name": "SA"
+                        },
+                        {
+                            "type": "KEYWORD",
+                            "id": 18,
+                            "name": "PB"
+                        }
+                    ],
+                    "body": [],
+                    "gdt": {}
+                },
+                {
+                    "name": "endsWith",
+                    "type": "method",
+                    "annotation": [],
+                    "transfers": [
+                        {
+                            "type": "variable",
+                            "name": "phrase",
+                            "annotation": [],
+                            "attributes": [],
+                            "gdt": {}
+                        },
+                        {
+                            "type": "variable",
+                            "name": "endWit",
+                            "annotation": [],
+                            "attributes": [],
+                            "gdt": {}
+                        }
+                    ],
+                    "attributes": [],
+                    "body": [
+                        {
+                            "type": "variable",
+                            "name": "a",
+                            "annotation": [],
+                            "attributes": [],
+                            "gdt": {}
+                        },
+                        {
+                            "type": "executor",
+                            "multiExecutor": {
+                                "type": "MULTIEXECUTOR",
+                                "varMap": [
+                                    {
+                                        "type": "CONTEXT",
+                                        "text": "a"
+                                    },
+                                    {
+                                        "type": "NUMBER",
+                                        "sign": 11,
+                                        "value": 5
+                                    },
+                                    {
+                                        "type": "INNER_EXECUTOR",
+                                        "value": 3
+                                    }
+                                ],
+                                "executors": [
+                                    {
+                                        "type": "OPERATOR",
+                                        "result": 3,
+                                        "param1": 1,
+                                        "param2": 2,
+                                        "operator": {
+                                            "type": "KEYWORD",
+                                            "id": 40,
+                                            "name": "+V"
+                                        }
+                                    }
+                                ],
+                                "resultIndex": 531
+                            },
+                            "gdt": {}
+                        },
+                        {
+                            "type": "executor",
+                            "multiExecutor": {
+                                "type": "MULTIEXECUTOR",
+                                "varMap": [
+                                    {
+                                        "type": "CONTEXT",
+                                        "text": "a"
+                                    },
+                                    {
+                                        "type": "CONTEXT",
+                                        "text": "a"
+                                    },
+                                    {
+                                        "type": "INNER_EXECUTOR",
+                                        "value": 3
+                                    },
+                                    {
+                                        "type": "INNER_EXECUTOR",
+                                        "value": 4
+                                    }
+                                ],
+                                "executors": [
+                                    {
+                                        "type": "OPERATOR",
+                                        "result": 3,
+                                        "param1": 0,
+                                        "param2": 2,
+                                        "operator": {
+                                            "type": "KEYWORD",
+                                            "id": 41,
+                                            "name": "++"
+                                        }
+                                    },
+                                    {
+                                        "type": "OPERATOR",
+                                        "result": 4,
+                                        "param1": 1,
+                                        "param2": 3,
+                                        "operator": {
+                                            "type": "KEYWORD",
+                                            "id": 60,
+                                            "name": "V"
+                                        }
+                                    }
+                                ],
+                                "resultIndex": 531
+                            },
+                            "gdt": {}
+                        },
+                        {
+                            "type": "executor",
+                            "multiExecutor": {
+                                "type": "MULTIEXECUTOR",
+                                "varMap": [
+                                    {
+                                        "type": "CONTEXT",
+                                        "text": "a"
+                                    },
+                                    {
+                                        "type": "CONTEXT",
+                                        "text": "a"
+                                    },
+                                    {
+                                        "type": "NUMBER",
+                                        "sign": 11,
+                                        "value": 2
+                                    },
+                                    {
+                                        "type": "NUMBER",
+                                        "sign": 11,
+                                        "value": 3
+                                    },
+                                    {
+                                        "type": "INNER_EXECUTOR",
+                                        "value": 5
+                                    },
+                                    {
+                                        "type": "INNER_EXECUTOR",
+                                        "value": 6
+                                    },
+                                    {
+                                        "type": "INNER_EXECUTOR",
+                                        "value": 7
+                                    }
+                                ],
+                                "executors": [
+                                    {
+                                        "type": "OPERATOR",
+                                        "result": 5,
+                                        "param1": 3,
+                                        "param2": 4,
+                                        "operator": {
+                                            "type": "KEYWORD",
+                                            "id": 48,
+                                            "name": "M"
+                                        }
+                                    },
+                                    {
+                                        "type": "OPERATOR",
+                                        "result": 6,
+                                        "param1": 2,
+                                        "param2": 5,
+                                        "operator": {
+                                            "type": "KEYWORD",
+                                            "id": 42,
+                                            "name": "+"
+                                        }
+                                    },
+                                    {
+                                        "type": "OPERATOR",
+                                        "result": 7,
+                                        "param1": 1,
+                                        "param2": 6,
+                                        "operator": {
+                                            "type": "KEYWORD",
+                                            "id": 60,
+                                            "name": "V"
+                                        }
+                                    }
+                                ],
+                                "resultIndex": 531
+                            },
+                            "gdt": {}
+                        },
+                        {
+                            "type": "executor",
+                            "multiExecutor": {
+                                "type": "MULTIEXECUTOR",
+                                "varMap": [
+                                    {
+                                        "type": "CONTEXT",
+                                        "text": "a"
+                                    },
+                                    {
+                                        "type": "CONTEXT",
+                                        "text": "a"
+                                    },
+                                    {
+                                        "type": "NUMBER",
+                                        "sign": 11,
+                                        "value": 2
+                                    },
+                                    {
+                                        "type": "INNER_EXECUTOR",
+                                        "value": 4
+                                    },
+                                    {
+                                        "type": "INNER_EXECUTOR",
+                                        "value": 5
+                                    }
+                                ],
+                                "executors": [
+                                    {
+                                        "type": "OPERATOR",
+                                        "result": 4,
+                                        "param1": 2,
+                                        "param2": 3,
+                                        "operator": {
+                                            "type": "KEYWORD",
+                                            "id": 46,
+                                            "name": "PO"
+                                        }
+                                    },
+                                    {
+                                        "type": "OPERATOR",
+                                        "result": 5,
+                                        "param1": 1,
+                                        "param2": 4,
+                                        "operator": {
+                                            "type": "KEYWORD",
+                                            "id": 60,
+                                            "name": "V"
+                                        }
+                                    }
+                                ],
+                                "resultIndex": 531
+                            },
+                            "gdt": {}
+                        },
+                        {
+                            "type": "executor",
+                            "multiExecutor": {
+                                "type": "MULTIEXECUTOR",
+                                "varMap": [
+                                    {
+                                        "type": "NUMBER",
+                                        "sign": 11,
+                                        "value": 2
+                                    },
+                                    {
+                                        "type": "INNER_EXECUTOR",
+                                        "value": 2
+                                    },
+                                    {
+                                        "type": "INNER_EXECUTOR",
+                                        "value": 3
+                                    }
+                                ],
+                                "executors": [
+                                    {
+                                        "type": "OPERATOR",
+                                        "result": 2,
+                                        "param1": 0,
+                                        "param2": 1,
+                                        "operator": {
+                                            "type": "KEYWORD",
+                                            "id": 60,
+                                            "name": "V"
+                                        }
+                                    },
+                                    {
+                                        "type": "OPERATOR",
+                                        "result": 3,
+                                        "param1": 0,
+                                        "param2": 2,
+                                        "operator": {
+                                            "type": "KEYWORD",
+                                            "id": 84,
+                                            "name": "RT"
+                                        }
+                                    }
+                                ],
+                                "resultIndex": 0
+                            },
+                            "gdt": {}
+                        },
+                        {
+                            "type": "executor",
+                            "multiExecutor": {
+                                "type": "MULTIEXECUTOR",
+                                "varMap": [
+                                    {
+                                        "type": "NUMBER",
+                                        "sign": 11,
+                                        "value": 2
+                                    },
+                                    {
+                                        "type": "INNER_EXECUTOR",
+                                        "value": 2
+                                    },
+                                    {
+                                        "type": "INNER_EXECUTOR",
+                                        "value": 3
+                                    }
+                                ],
+                                "executors": [
+                                    {
+                                        "type": "OPERATOR",
+                                        "result": 2,
+                                        "param1": 0,
+                                        "param2": 1,
+                                        "operator": {
+                                            "type": "KEYWORD",
+                                            "id": 84,
+                                            "name": "RT"
+                                        }
+                                    },
+                                    {
+                                        "type": "OPERATOR",
+                                        "result": 3,
+                                        "param1": 0,
+                                        "param2": 2,
+                                        "operator": {
+                                            "type": "KEYWORD",
+                                            "id": 86,
+                                            "name": "CT"
+                                        }
+                                    }
+                                ],
+                                "resultIndex": 0
+                            },
+                            "gdt": {}
+                        }
+                    ],
+                    "gdt": {}
+                }
+            ]
+        }
+    ]
+}

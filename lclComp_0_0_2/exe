@@ -1,0 +1,9 @@
+#!/bin/bash
+cd test
+if [ "$1" == "-h" ];
+then 
+./exc -h
+else
+./exc -fl -td -ts -sj -f ./code/test.lcx > cl.log
+cat cl.log | less
+fi

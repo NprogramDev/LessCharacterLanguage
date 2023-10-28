@@ -1,0 +1,28 @@
+{
+    // Version
+    "version": [0,0,2],
+    // Version Mode (can be given as Number or Keywords separated by '|' (vertical lines))
+    /*
+    // Ignore Versions
+    IGNORE_MAJOR_VERSION:   0b0000 0001 = 01
+    IGNORE_MINOR_VERSION:   0b0000 0010 = 02
+    IGNORE_PATH_VERSION:    0b0000 0100 = 04
+    // Allow Version
+    ALLOW_VERSION_HIGHER:   0b0000 1000 = 08
+    ALLOW_VERSION_LOWER:    0b0001 0000 = 16
+    // Presets
+    EVERY_NEWER_VERSION:    0b0000 1100 = 12
+    EVERY_LOWER_VERSION:    0b0001 0100 = 20
+    VERSION_DOES_NOT_MATTER:0b0001 1111 = 31
+    EXACT_THAT_VERSION:     0b0000 0000 = 00
+    */
+    "versionMode":31,
+    // General Annotations for all classes (@ does not matter)
+    "generalAnnotations":[],
+    // General Imports for all classes
+    "generalImports":[],
+    // Annotations Mappings (@ does not matter)
+    "annotationsMappings":{
+        "PROGRAM_VERSION": "[0,1,0]"
+    }
+}

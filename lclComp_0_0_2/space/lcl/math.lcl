@@ -1,0 +1,62 @@
+SA CL math W
+ PB  I powT I base, I exp NTW
+ RT V 0J
+    RF T I i V 0 J i < exp J i++ NTW
+        RT MV baseJ
+    NW
+ NW
+ PB D invsqrtTF srcNTW
+    L iJ
+    F x2,yJ
+    FL F treehalfs V 1.5FJ
+    x2 V src M 0.5FJ
+    y V srcJ
+    i V GPV TLNT GPO yJ
+    i V 0x5f3759df - T i NT
+ NW
+ PB I gcdTI a, I bNTW
+   b E 0 Y
+   RT bJ
+   NY
+   gcdTb,a P bNTJ
+   NYNY
+ NW
+ PB I getfl_bin_digitT D num NTW
+   RT V getfl_expTnumNT
+   RT V 2 PXO RTJ
+ NW
+
+ PB I getfl_expT D numNTW
+   BIN i TBINNT numJ
+   BIN x V 0J
+   RFT I a V 0 J a < 11 J a++NTW
+      xKaNK V iKa + 52NKJ
+   NW
+   RT V TINT xJ
+   
+ NW
+ PB D sqrtTD srcNTW
+    
+ NW
+ PB D sinTD alphaNTW
+ 
+ NW
+ PB D cosTD alphaNTW
+
+ NW
+ PB D asinTD asprNTW
+ 
+ NW
+ PB D acosTD asprNTW
+
+ NW
+ PB D tanTD alphaNTW
+
+ NW
+ PB D atanTD asprNTW
+    
+ NW
+ PB D atan2TD asprNTW
+    
+ NW
+NW

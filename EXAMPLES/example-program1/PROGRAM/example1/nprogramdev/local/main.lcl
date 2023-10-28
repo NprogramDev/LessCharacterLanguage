@@ -1,0 +1,15 @@
+PK Zexample1/nprogramdev/localZ
+IM Z§printZ
+IM Z§AssetLoaderZ
+
+UApreloadassetTZ?/msg.txtZNTJ
+UV
+
+PB SA VO printfileTNTW
+    printTassetloader.getstringTZ?/msg.txtZNTNTJ
+NW
+
+PB SA VO mainT SKNK argsNTW
+    printfileTNTJ
+    printTargsNT
+NW
