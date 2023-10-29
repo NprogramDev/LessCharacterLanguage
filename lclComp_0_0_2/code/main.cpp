@@ -294,6 +294,7 @@ int main(int argc, char **argv)
                 bool tfj = args.doesExist("--tokeniseFileJson");
                 bool btyf = true;
                 if(tj || tfj){
+                    try{
                     std::string json = tokenJSON(root);
                     if(btyf){
                         json = beatiful(json);
@@ -308,7 +309,9 @@ int main(int argc, char **argv)
                             std::cout << "[File wasn't written!]" << *it << ".json" << std::endl;
                         }
                     }
-
+                    }catch (...){
+                        std::cout << "JSON has a problem!" << std::endl;
+                    }
                 }
 			}
 			catch (std::string e)
@@ -328,10 +331,13 @@ int main(int argc, char **argv)
 	catch (std::string e)
 	{
 		std::cout << "[ERRGL] " << e << std::endl;
+        return -1;
 	}
 	catch (char const *e)
 	{
 		std::cout << "[ERRGL] " << e << std::endl;
+        return -1;
 	}
 	//	Logger::waitForClose();
+    return 0;
 }

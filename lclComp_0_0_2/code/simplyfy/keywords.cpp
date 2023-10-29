@@ -122,6 +122,8 @@ void Keywords::reg(){
 	Keywords::init(Keywords::l::para_synchronized,"SYN");
 	Keywords::init(Keywords::l::para_comma,",");
 	Keywords::init(Keywords::l::para_point,".");
+    //
+    Keywords::init(Keywords::l::para_extern,"EXTERN");
 	//
 //	Keywords::init(Keywords::l::para_,"");
 }

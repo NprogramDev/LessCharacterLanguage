@@ -1,8 +1,17 @@
+
 static class ABC( int , bool ){
+    public static void println(String str){
+            "C++" extern ex(str,"
+                #include <iostream>
+                std::cout << str;
+            ");
+        }
     public static void  main(){
         int a = switch(a==b){
             case a; print(b);
             case b; print(c);
         }
+        int b += 2;
     }
+
 }

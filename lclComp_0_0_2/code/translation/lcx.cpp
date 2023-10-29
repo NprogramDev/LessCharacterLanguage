@@ -1,59 +1,85 @@
 #include "lcx.hpp"
+#include <sstream>
 using namespace CompileLCL;
 
 std::string replaceSTR(std::string in,std::string search,std::string replaceStr,char escapeBlockArea){
-	char startBlockedArea[] = {'\"'};
-	char endBlockedArea[] = {'\"'};
-	std::string rt;
+	char startBlockedArea[] = {'"'};
+	char endBlockedArea[] = {'"'};
+	std::stringstream rt;
 	size_t searchIterator = 0;
 	size_t startBlockedAreaSize = (sizeof(startBlockedArea) / sizeof(char));
 	size_t endBlockedAreaSize = (sizeof(endBlockedArea) / sizeof(char));
 	size_t offset = 0;
 	bool startFinding = false;
 	bool isBlockArea = false;
+    bool laterBlock = false;
 	size_t startPos = 0;
 	for(size_t i =0; i < in.length(); i++){
+        // IF BLOCKED => IS BLOCKED DEACTIVATED
 		if(isBlockArea){
 			for(size_t bai = 0; bai < endBlockedAreaSize; bai++){
 				if(endBlockedArea[bai] == (char) in[i+offset]){
-					if(!(i == 0 || escapeBlockArea == (char) in[i+offset-1]))isBlockArea = false;
+					if(!(i == 0 || escapeBlockArea == (char) in[i+offset-1])) {
+                        isBlockArea = false;
+                        laterBlock = true;
+                      //  std::cout << "END!"<<std::endl;
+                    }
 					break;
 				}
 			}
 		}
-		if(search[searchIterator] == in[i + offset] && !isBlockArea){
-			if(!startFinding)startPos = i;
-			startFinding = true;
-			searchIterator++;
-		//	if(search == "static") std::cout << "STA:" << rt << in << std::endl;
-			if(searchIterator == search.length()){
-				rt += replaceStr;
-				startFinding = false;
-				searchIterator = 0;
-			}
-		}else{
-		//	if(search == "static") std::cout << "STA:" << searchIterator << rt << in << std::endl;
-			if(startFinding){
-				startFinding = false;
-				i = startPos;
-				searchIterator =0;
-			}
-			rt += in[i+offset];
-		}
+        if(!isBlockArea){
+            if(search[searchIterator] == in[i + offset]){
+                if(!startFinding)startPos = i;
+                startFinding = true;
+                searchIterator++;
+                //	if(search == "static") std::cout << "STA:" << rt << in << std::endl;
+                if(searchIterator == search.length()){
+                    rt << replaceStr;
+                    startFinding = false;
+                    searchIterator = 0;
+                }
+            }else{
+                //	if(search == "static") std::cout << "STA:" << searchIterator << rt << in << std::endl;
+                if(startFinding){
+                    startFinding = false;
+                    i = startPos;
+                    searchIterator =0;
+                }
+                rt << in[i+offset];
+            }
+        }else{
+            rt << in[i+offset];
+        }
+
+        // IF NOT BLOCKED => IS BLOCKED ACTIVATED
 		if(!isBlockArea){
 			for(size_t bai = 0; bai < startBlockedAreaSize; bai++){
 				if(startBlockedArea[bai] == (char) in[i+offset]){
-					if(!(i == 0 || escapeBlockArea == (char) in[i+offset-1]))isBlockArea = true;
+					if(!(i == 0 || escapeBlockArea == (char) in[i+offset-1])) {
+                        if(!laterBlock){
+                            isBlockArea = true;
+                        }
+                        //std::cout << "START!"<<std::endl;
+                    }
 					break;
 				}
 			}
 		}
+        laterBlock = false;
+   //     std::cout << "I: " << i << std::endl;
 	}
-	return rt;
+	return rt.str();
 }
 
 std::string LCX::translate(std::string in){
 	for(size_t i = 0; i< in.length(); i++){
+        if(in.at(i) == '"'){
+            i++;
+            while(in.at(i) != '"'){
+                i++;
+            }
+        }
 		if((int)'A' <= (int) in.at(i) && (int) in.at(i) <= (int) 'Z'){in.insert(i,"#"); i++;}
 	}
     for(long long i = 0; i < Keywords::length; i++){
@@ -181,6 +207,8 @@ void LCX::reg(){
 	LCX::init(Keywords::l::para_synchronized,"synchronized");
 	LCX::init(Keywords::l::para_comma,",");
 	LCX::init(Keywords::l::para_point,".");
+
+    LCX::init(Keywords::l::para_extern,"extern");
 	//
 //	LCX::init(Keywords::l::para_,"");
 }

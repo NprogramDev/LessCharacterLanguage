@@ -156,6 +156,8 @@ namespace CompileLCL
 			//
 			para_pointer_addr,
 			para_pointer_value,
+            //
+            para_extern,
 			//
 			end_of_enum
 		};

@@ -1,6 +1,7 @@
 #ifndef LCX_HPP_
 #define LCX_HPP_
 #include <string>
+#include <iostream>
 #include "../simplyfy/keywords.hpp"
 #include "../helper.hpp"
 namespace CompileLCL{

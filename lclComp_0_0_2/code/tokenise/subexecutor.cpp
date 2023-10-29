@@ -95,8 +95,12 @@ void MultiExecutor::resolveLength()
         // printC();
         std::cout << "RESOLVE LENGTH -> X1" << std::endl;
         printC();
-        if (!i->executor_jumpBrackets())
+        if (i->executor_jumpBrackets()) //=> JUMPED
         {
+            i->operator--();
+            if(i->isK(Keywords::l::para_bracket_curly_close))break;
+                i->operator++();
+        }else{ // => NOT JUMPED
             i->operator++();
         }
         if (i->isK() && i->ck() == Keywords::l::para_bracket_round_close){
@@ -177,7 +181,11 @@ Keywords::l MultiExecutor::OPERATOR_ORDER[] = {
     Keywords::l::para_set,
     Keywords::l::para_return,
     Keywords::l::para_break,
-    Keywords::l::para_continue};
+    Keywords::l::para_continue,
+    Keywords::l::para_package,
+    Keywords::l::para_import,
+    Keywords::l::para_extern
+    };
 void MultiExecutor::goUntil(Keywords::l kw)
 {
     while (i->ci() < end && !(i->isK() && i->ck() == kw))
@@ -288,6 +296,7 @@ void MultiExecutor::resolveMethod()
     MethodExecutor *meth = new MethodExecutor(i,innerVre);
     meth->result = iexV->getVariableID();
     meth->namePath = name->getVariableID();
+    meth->ivId =0;
     if (i->isDebug())
         std::cout << "--3--" << std::endl;
     meth->parse();

@@ -19,6 +19,109 @@
     }],
    "body":[
     {
+     "name":"println",
+     "type":"method",
+     "annotation":[
+      ],
+     "transfers":[
+      {
+       "type":"variable",
+       "name":"str",
+       "annotation":[
+        ],
+       "attributes":[
+        ],
+       "gdt":{
+        
+       }
+      }],
+     "attributes":[
+      {
+       "type":"KEYWORD",
+       "id":25,
+       "name":"SA"
+      },
+      {
+       "type":"KEYWORD",
+       "id":18,
+       "name":"PB"
+      }],
+     "body":[
+      {
+       "type":"executor",
+       "multiExecutor":{
+        "type":"MULTIEXECUTOR",
+        "varMap":[
+         {
+          "type":"STRING",
+          "text":"C++"
+         },
+         {
+          "type":"CONTEXT",
+          "text":"ex"
+         },
+         {
+          "type":"INNER_EXECUTOR",
+          "value":3
+         },
+         {
+          "type":"INNER_EXECUTOR",
+          "value":4
+         }],
+        "executors":[
+         {
+          "type":"METHOD",
+          "pathName":2,
+          "anonymousFunction":0,
+          "params":[
+           {
+            "type":"MULTIEXECUTOR",
+            "varMap":[
+             {
+              "type":"CONTEXT",
+              "text":"str"
+             }],
+            "executors":[
+             ],
+            "resultIndex":2999884384
+           },
+           {
+            "type":"MULTIEXECUTOR",
+            "varMap":[
+             {
+              "type":"STRING",
+              "text":"\n                include <iostream>\n                std::cout << str;\n            "
+             }],
+            "executors":[
+             ],
+            "resultIndex":2999884512
+           }],
+          "result":3
+         },
+         {
+          "type":"OPERATOR",
+          "result":4,
+          "param1":1,
+          "param2":3,
+          "operator":{
+           "type":"KEYWORD",
+           "id":125,
+           "name":"EXTERN"
+          }
+         }],
+        "resultIndex":1701869940
+       },
+       "anonymousFunctions":[
+        ],
+       "gdt":{
+        
+       }
+      }],
+     "gdt":{
+      
+     }
+    },
+    {
      "name":"main",
      "type":"method",
      "annotation":[
@@ -94,7 +197,7 @@
                 "name":"E"
                }
               }],
-             "resultIndex":2289800384
+             "resultIndex":2999897536
             }],
            "anonymousFunction":1
           },
@@ -109,7 +212,7 @@
             "name":"V"
            }
           }],
-         "resultIndex":1887007778
+         "resultIndex":810327632
         },
         "anonymousFunctions":[
          {
@@ -138,10 +241,10 @@
                   }],
                  "executors":[
                   ],
-                 "resultIndex":2289795920
+                 "resultIndex":25705
                 }]
               }],
-             "resultIndex":2289795792
+             "resultIndex":2999893760
             },
             "anonymousFunctions":[
              ],
@@ -166,7 +269,7 @@
               {
                "type":"METHOD",
                "pathName":1,
-               "anonymousFunction":2471894482176,
+               "anonymousFunction":0,
                "params":[
                 {
                  "type":"MULTIEXECUTOR",
@@ -177,11 +280,11 @@
                   }],
                  "executors":[
                   ],
-                 "resultIndex":574902863
+                 "resultIndex":2999894432
                 }],
                "result":2
               }],
-             "resultIndex":746398295
+             "resultIndex":25705
             },
             "anonymousFunctions":[
              ],
@@ -212,10 +315,10 @@
                   }],
                  "executors":[
                   ],
-                 "resultIndex":576791098
+                 "resultIndex":2999894976
                 }]
               }],
-             "resultIndex":1380931417
+             "resultIndex":2999894848
             },
             "anonymousFunctions":[
              ],
@@ -251,11 +354,11 @@
                   }],
                  "executors":[
                   ],
-                 "resultIndex":1948416812
+                 "resultIndex":1954047348
                 }],
                "result":2
               }],
-             "resultIndex":1415071060
+             "resultIndex":1313817378
             },
             "anonymousFunctions":[
              ],
@@ -272,6 +375,55 @@
         
        }
       }],
+     "gdt":{
+      
+     }
+    },
+    {
+     "type":"variable",
+     "name":"b",
+     "annotation":[
+      ],
+     "attributes":[
+      ],
+     "initExecutors":{
+      "type":"executor",
+      "multiExecutor":{
+       "type":"MULTIEXECUTOR",
+       "varMap":[
+        {
+         "type":"CONTEXT",
+         "text":"b"
+        },
+        {
+         "type":"NUMBER",
+         "sign":11,
+         "value":2
+        },
+        {
+         "type":"INNER_EXECUTOR",
+         "value":3
+        }],
+       "executors":[
+        {
+         "type":"OPERATOR",
+         "result":3,
+         "param1":1,
+         "param2":2,
+         "operator":{
+          "type":"KEYWORD",
+          "id":43,
+          "name":"+V"
+         }
+        }],
+       "resultIndex":1313817378
+      },
+      "anonymousFunctions":[
+       ],
+      "gdt":{
+       
+      }
+     },
      "gdt":{
       
      }

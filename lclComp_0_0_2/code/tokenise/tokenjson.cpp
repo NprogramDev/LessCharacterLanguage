@@ -2,6 +2,10 @@
 
 using namespace CompileLCL;
 
+void println(std::string strx){
+    std::cout << strx << std::endl;
+}
+
 std::string CompileLCL::tokenJSON(ROOT *root) {
     json::jobject rt;
     json::jobject meta;
@@ -16,6 +20,7 @@ json::jobject CompileLCL::tokenICO(ICO *ic) {
     json::jobject curr;
     switch ((ic)->getID()) {
         case ICOID_CLASS: {
+            println("CLASS!");
             curr[TOKEN_JSON_TYPE] = TOKEN_JSON_TYPE_CLASS;
             Class &x = *(dynamic_cast<Class *>(ic));
             curr["name"] = x.name;
@@ -31,6 +36,7 @@ json::jobject CompileLCL::tokenICO(ICO *ic) {
             break;
         }
         case ICOID_EXE: {
+            println("EXECUTOR!");
             Executor &x = *(dynamic_cast<Executor *>(ic));
             curr[TOKEN_JSON_TYPE] = TOKEN_JSON_TYPE_EXECUTOR;
             curr["multiExecutor"] = jsonMultiExecutor(x.mex);
@@ -46,6 +52,7 @@ json::jobject CompileLCL::tokenICO(ICO *ic) {
         }
 
         case ICOID_METHOD: {
+            println("METHOD!");
             Method &x = *(dynamic_cast<Method *>(ic));
             curr["name"] = x.name;
             curr[TOKEN_JSON_TYPE] = TOKEN_JSON_TYPE_METHOD;
@@ -84,7 +91,7 @@ json::jobject CompileLCL::tokenICO(ICO *ic) {
         }
         case ICOID_VAR: {
             curr[TOKEN_JSON_TYPE] = TOKEN_JSON_TYPE_VARIABLE;
-
+            println("VARIABLE!");
             Variable &x = *(dynamic_cast<Variable *>(ic));
             curr["name"] = x.name;
             std::vector<std::string> annot;
@@ -102,12 +109,16 @@ json::jobject CompileLCL::tokenICO(ICO *ic) {
                 delete a;
             }
             curr["attributes"] = attr;
-            curr["initExecutors"] = tokenICO(x.defaultValEx);
+            if(x.defaultValEx != nullptr){
+                curr["initExecutors"] = tokenICO(x.defaultValEx);
+            }
             curr["gdt"] = jsonGDT(x.gdt);
+            println("VRE END!");
             break;
         }
         case ICOID_VRE: {
             VariableEnvironment &x = *(dynamic_cast<VariableEnvironment *>(ic));
+            println("VRE!");
             curr[TOKEN_JSON_TYPE] = TOKEN_JSON_TYPE_VRE;
             curr["body"] = tokenizeVRE(x);
             break;
